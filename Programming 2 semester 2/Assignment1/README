@@ -1,0 +1,32 @@
+# 🐾 Pet Manager — JavaFX Project
+
+This is a JavaFX desktop application built as part of a Programming 2 assignment. It allows users to manage a collection of virtual pets, including creating, editing, deleting, and exporting/importing them from Excel files. The project emphasizes clean UI interaction, validation, and data persistence.
+
+---
+
+Features
+
+- Add new pets with customizable happiness, hunger, and energy levels
+- Search pets by name
+- ✏Edit pets directly in the TableView
+- Delete pets
+- Export pets to Excel
+- Import pets from Excel (while preserving pet IDs)
+- Input validation with clear error handling
+- Built using JavaFX and SceneBuilder
+
+ Technologies 
+
+- Java 17+
+- JavaFX
+- Apache POI (for Excel file handling)
+- Maven (project build tool)
+- IntelliJ IDEA (recommended IDE)
+
+---
+
+ Clone the repo
+
+```bash
+git clone https://github.com/snezhv12/PetManager-JavaFX.git
+cd PetManager-JavaFX
