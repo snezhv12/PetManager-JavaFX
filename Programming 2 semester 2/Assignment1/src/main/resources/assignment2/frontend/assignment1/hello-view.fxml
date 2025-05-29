@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #f2ecf9;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment2.frontend.assignment1.UrFavoritePetManager">
+   <children>
+      <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="0.5" layoutY="0.5" prefHeight="637.0" prefWidth="792.0" style="-fx-background-color: #ffffff;" vgap="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+         <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="70.0" />
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="30.0" />
+         </columnConstraints>
+
+         <rowConstraints>
+            <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="500.0" minHeight="200.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+
+         <children>
+
+            <!-- Labels -->
+            <Label text="choose name for your pet :3" GridPane.rowIndex="0">
+               <GridPane.margin><Insets bottom="30" left="30" right="30" top="30" /></GridPane.margin>
+               <font><Font name="Monospaced Bold" size="16.0" /></font>
+            </Label>
+
+            <Label text="how happy's your pet?" GridPane.rowIndex="1">
+               <GridPane.margin><Insets bottom="30" left="30" right="30" top="30" /></GridPane.margin>
+               <font><Font name="Monospaced Bold" size="13.0" /></font>
+            </Label>
+
+            <Label text="how hungry's your pet?" GridPane.rowIndex="2">
+               <GridPane.margin><Insets bottom="30" left="30" right="30" top="30" /></GridPane.margin>
+               <font><Font name="Monospaced Bold" size="13.0" /></font>
+            </Label>
+
+            <Label text="how energized's your pet?" GridPane.rowIndex="3">
+               <GridPane.margin><Insets bottom="30" left="30" right="30" top="30" /></GridPane.margin>
+               <font><Font name="Monospaced Bold" size="13.0" /></font>
+            </Label>
+
+            <!-- Text field -->
+            <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <GridPane.margin><Insets bottom="15" left="15" right="15" top="15" /></GridPane.margin>
+            </TextField>
+
+            <!-- Sliders -->
+            <Slider fx:id="happinessSlider" showTickLabels="true" showTickMarks="true" value="50" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Slider fx:id="hungerSlider" showTickLabels="true" showTickMarks="true" value="50" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Slider fx:id="energySlider" showTickLabels="true" showTickMarks="true" value="50" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="search pet by name:" GridPane.columnIndex="0" GridPane.rowIndex="6">
+               <GridPane.margin><Insets left="40" top="15" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Label>
+
+            <Label text="search pet by name:" GridPane.columnIndex="0" GridPane.rowIndex="6">
+               <GridPane.margin><Insets left="40" top="15" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Label>
+
+            <TextField fx:id="searchField" onAction="#searchPet" promptText="type pet's name and hit enter" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin><Insets left="0" top="15" /></GridPane.margin>
+            </TextField>
+            <!-- Buttons -->
+            <Button fx:id="savePetButton" onAction="#savePet" text="save your pet" GridPane.rowIndex="4">
+               <GridPane.margin><Insets bottom="15" left="70" top="15" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Button>
+
+            <Button fx:id="cancelButton" onAction="#cancelInput" text="discard" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin><Insets bottom="15" left="90" top="15" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Button>
+
+            <Button fx:id="showPetsButton" onAction="#showPets" text="show pets" GridPane.rowIndex="5">
+               <GridPane.margin><Insets bottom="15" left="80" top="15" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Button>
+
+            <Button fx:id="quitButton" onAction="#quitApplication" text="quit" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin><Insets bottom="15" left="95" top="15" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Button>
+            <Button fx:id="btnRemove" onAction="#removePet" text="remove pet" GridPane.columnIndex="0" GridPane.rowIndex="5">
+               <GridPane.margin><Insets bottom="15.0" left="400.0" top="15.0" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Button>
+
+            <Button fx:id="btnExport" onAction="#exportPetsToExcel" text="export" GridPane.columnIndex="0" GridPane.rowIndex="4">
+               <GridPane.margin><Insets bottom="15" left="275" top="15" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Button>
+            <Button fx:id="btnImport" onAction="#importPetsFromExcel" text="import" GridPane.columnIndex="0" GridPane.rowIndex="4">
+               <GridPane.margin><Insets bottom="15" left="420" top="15" /></GridPane.margin>
+               <font><Font name="Monospaced Bold Italic" size="13.0" /></font>
+            </Button>
+            <ImageView fx:id="dogIcon" fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="15.0" left="260.0" right="80.0" top="15.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../../pet_icon.png" />
+               </image>
+            </ImageView>
+
+            <!-- Table -->
+            <ScrollPane GridPane.rowIndex="6">
+               <content>
+                  <TableView fx:id="petTable" editable="true" prefHeight="221" prefWidth="533">
+                     <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="53" text="ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="107" text="Name" />
+                        <TableColumn fx:id="happinessColumn" prefWidth="100" text="Happiness" />
+                        <TableColumn fx:id="hungerColumn" prefWidth="95" text="Hunger" />
+                        <TableColumn fx:id="energyColumn" prefWidth="77" text="Energy" />
+                     </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+
+            <!-- Image -->
+            <ImageView fitHeight="88.0" fitWidth="109.0" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../../../puppy.jpg" />
+               </image>
+               <GridPane.margin><Insets bottom="10.0" left="50.0" top="90.0" /></GridPane.margin>
+            </ImageView>
+
+
+         </children>
+      </GridPane>
+
+      <!-- Title -->
+      <Label fx:id="marqueeLabel" layoutX="300.0" layoutY="50.0" styleClass="marquee-label" text="ur favorite pet manager" />
+
+   </children>
+
+   <padding>
+      <Insets bottom="40" left="40" right="40" top="100" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,72 @@
+/* ---------- Button Styling ---------- */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #fbc6f2, #dab4f9);
+    -fx-text-fill: white;
+    -fx-font-family: "Monospaced";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 25;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 6, 0.0, 0, 2);
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #f06292;
+}
+
+/* ---------- Marquee Title Label ---------- */
+.marquee-label {
+    -fx-font-family: "Monospaced";
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #bb44cc;
+    -fx-effect: dropshadow(gaussian, #fcb8ff, 10, 0.5, 0, 1);
+}
+
+/* ---------- TableView Styling ---------- */
+.pet-table {
+    -fx-border-color: #d6a4ec;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-table-cell-border-color: transparent;
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-size: 13px;
+    -fx-background-color: white; /* ensures visibility */
+}
+
+/* Header row (column titles) */
+.pet-table .column-header {
+    -fx-background-color: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #6a0dad;
+}
+
+/* Column header frame */
+.pet-table .column-header-background {
+    -fx-background-color: white;
+    -fx-border-color: #d56eff;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 255, 0.35), 8, 0.5, 0, 3);
+}
+
+/* Table rows */
+.pet-table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 6px;
+}
+
+/* Cell content labels */
+.pet-table .label {
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6a0dad;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER;
+}
